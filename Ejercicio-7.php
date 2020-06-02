@@ -28,7 +28,7 @@ else {
 <form>
 <form>
 Escriba un numero:
-<input name="num" type="text" placeholder="Numero" >
+<input name="numero" type="text" placeholder="Numero" >
 <input type="submit" value="Validadr">
 </form>
 
