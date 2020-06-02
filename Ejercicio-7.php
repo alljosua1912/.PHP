@@ -13,6 +13,12 @@ hasta el lado del servidor*/
 $num=$_GET['numero'];
 $i=2;
 $primo=true;
+if (is_numeric($num)) { 
+    echo $num . " is numeric"; 
+} 
+else { 
+    echo $num . " is not numeric"; 
+} 
 while($primo && $i<$num){
     $primo=($num%$i) !=0;
     $i++;
@@ -23,12 +29,7 @@ if($primo){
 else {
     echo "El numero $num no es primo";
 }
-if (is_numeric($num)) { 
-    echo $num . " is numeric"; 
-} 
-else { 
-    echo $num . " is not numeric"; 
-} 
+
 ?>
 
 <form>
