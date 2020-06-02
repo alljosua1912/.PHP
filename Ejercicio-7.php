@@ -23,7 +23,12 @@ if($primo){
 else {
     echo "El numero $num no es primo";
 }
-if (is_numeric(0123456789)) { echo "Yes"; } else { echo "No"; }
+if (is_numeric($num)) { 
+    echo $num . " is numeric"; 
+} 
+else { 
+    echo $num . " is not numeric"; 
+} 
 ?>
 
 <form>
