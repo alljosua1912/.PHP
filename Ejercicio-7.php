@@ -2,7 +2,7 @@
 <html>
 <body>
 
-<h1>Ejercicio 6</h1>
+<h1>Ejercicio 7</h1>
 <?php
 
 // Este ejercicio corresponde a utilizacion de Formularios en PHP
@@ -12,39 +12,44 @@ header ("Content-type: text/html;charset =\"utf-8\"");
 hasta el lado del servidor*/
 echo "<h1>".$_GET ['numero']."</h1>";
 
-do{
-
-if (is_numeric($_GET['numero']) && is_float($_GET['numero'] !=1) && $_GET ['numero']>1) 
-{
-    
-    
-$primo=0;
-$divisores =2;
-while($divisores < $_GET['numero'] && $primo !=1)
-{
-    if($_GET['numero'] % ==0 ) 
-    $primo =1 ;
-    $divisores++;
-}
-
-    if(primo==0)
-    {
-        echo "<h3> Numero primo".$_GET['numero']."</h3>";
+function primo($num){
+    $cont = 0;
+    for($i = 1; $i <= $num; $i++){
+    if($num % $i == 0){
+    //echo «$i <br>»;
+    $cont++;
     }
-    else
-    {
-        echo "<h3> No es primo </h3>";
     }
-
-}
-}while
+    
+    if($cont==2){
+    return true;
+    }
+    else{
+    return false;
+    }
+    }
 ?>
 
 <form>
-Ingrese un número para validar:
-<input name="numero" type="text" placeholder="Escribe el numero" >
-
-<input type="submit" value="Registrar">
+<tr>
+<td><strong>Ingrese un número:</strong></td>
+<td><label>
+<input type=»text» name=»numero_primo» id=»numero_primo» />
+</label></td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td colspan=»2″><div align=»center»>
+<label>
+<input type=»submit» name=»ok» id=»ok» value=»Ok» />
+</label>
+</div></td>
+</tr>
+</table>
+<label></label>
 </form>
 
 </body>
