@@ -10,7 +10,7 @@ header ("Content-type: text/html;charset =\"utf-8\"");
 
 /*Enviar informacion del navegador 
 hasta el lado del servidor*/
-echo "<h1>".$_GET ['numero']."</h1>";
+echo "<h1>".$_GET ['primo']."</h1>";
 
 function primo($num){
     $cont = 0;
