@@ -14,12 +14,12 @@ $num=$_GET['numero'];
 $i=2;
 $primo=true;
 if (is_numeric($num)) { 
-    echo $num . " is numeric"; 
+    echo $num . " Es numerico"; 
 } 
 else { 
-    echo $num . " is not numeric"; 
+    echo $num . " No es numerico"; 
 } 
-endif
+
 
 while($primo && $i<$num){
     $primo=($num%$i) !=0;
