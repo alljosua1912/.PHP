@@ -31,7 +31,7 @@ if($primo){
 else {
     echo "El numero $num no es primo";
 }
-endwhile
+
 
 ?>
 
