@@ -44,7 +44,7 @@ function primo($num){
 <tr>
 <td colspan=»2″><div align=»center»>
 <label>
-<input type=»submit» name=»ok» id=»ok» value=»Ok» />
+<input type="submit" value="validar">
 </label>
 </div></td>
 </tr>
