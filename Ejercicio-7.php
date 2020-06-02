@@ -15,9 +15,11 @@ $i=2;
 $primo=true;
 if (is_numeric($num)) { 
     echo $num . " Es numerico"; 
+    echo "<br>";
 } 
 else { 
     echo $num . " No es numerico"; 
+    echo "<br>";
 } 
 
 
@@ -27,9 +29,11 @@ while($primo && $i<$num){
 }
 if($primo){
     echo " El Numero $num es primo";
+    echo "<br>";
 }
 else {
     echo "El numero $num no es primo";
+    echo "<br>";
 }
 
 
