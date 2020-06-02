@@ -19,6 +19,8 @@ if (is_numeric($num)) {
 else { 
     echo $num . " is not numeric"; 
 } 
+endif
+
 while($primo && $i<$num){
     $primo=($num%$i) !=0;
     $i++;
@@ -29,6 +31,7 @@ if($primo){
 else {
     echo "El numero $num no es primo";
 }
+endwhile
 
 ?>
 
