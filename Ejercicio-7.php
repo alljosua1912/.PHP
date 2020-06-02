@@ -10,46 +10,26 @@ header ("Content-type: text/html;charset =\"utf-8\"");
 
 /*Enviar informacion del navegador 
 hasta el lado del servidor*/
-echo "<h1>".$_GET ['primo']."</h1>";
-
-function primo($num){
-    $cont = 0;
-    for($i = 1; $i <= $num; $i++){
-    if($num % $i == 0){
-    //echo «$i <br>»;
-    $cont++;
-    }
-    }
-    
-    if($cont==2){
-    return true;
-    }
-    else{
-    return false;
-    }
-    }
+$num=$_GET['numero'];
+$i=2;
+$primo=true;
+while($primo && $i<$num){
+    $primo=($num%$i) !=0;
+    $i++;
+}
+if($primo){
+    echo " El Numero $num es primo";
+}
+else {
+    echo "El numero $num no es primo";
+}
 ?>
 
 <form>
-<tr>
-<td><strong>Ingrese un número:</strong></td>
-<td><label>
-<input type=»text» name=»numero_primo» id=»numero_primo» />
-</label></td>
-</tr>
-<tr>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
-</tr>
-<tr>
-<td colspan=»2″><div align=»center»>
-<label>
-<input type="submit" value="validar">
-</label>
-</div></td>
-</tr>
-</table>
-<label></label>
+<form>
+Escriba un numero:
+<input name="num" type="text" placeholder="Numero" >
+<input type="submit" value="Validadr">
 </form>
 
 </body>
