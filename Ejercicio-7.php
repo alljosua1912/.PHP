@@ -13,15 +13,11 @@ hasta el lado del servidor*/
 $num=$_GET['numero'];
 $i=2;
 $primo=true;
-if (is_numeric($num)) { 
-    echo $num . "<h3> Es numerico</h3>"; 
-    echo "<br>";
-} 
-else { 
-    echo $num . "<h3> No es numerico</h3>"; 
-    echo "<br>";
-
-} 
+if (is_numeric($num)) {
+    print "<p>Ha escrito un número: $num.</p>\n";
+} else {
+    print "<p>NO ha escrito un número: $num.</p>\n";
+}
 
 
 
