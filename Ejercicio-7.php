@@ -21,7 +21,7 @@ else {
     echo $num . " No es numerico"; 
     echo "<br>";
 } 
-endif;
+
 
 
 while($primo && $i<$num){
