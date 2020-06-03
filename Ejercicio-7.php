@@ -2,47 +2,57 @@
 <html>
 <body>
 
-<h1>Ejercicio 7</h1>
+<h2>EJERCICIO 7</h2>
 <?php
 
-// Este ejercicio corresponde a utilizacion de Formularios en PHP
+// Para determinar si un Numero es Primo o no
 header ("Content-type: text/html;charset =\"utf-8\"");
 
-/*Enviar informacion del navegador 
-hasta el lado del servidor*/
-$num=$_GET['numero'];
-$i=2;
-$primo=true;
-if (is_numeric($num)) {
-    print "<p>Ha escrito un número: $num.</p>\n";
-} else {
-    print "<p>NO ha escrito un número: $num.</p>\n";
+// Funcion Primo
+function primo($numero)
+{
+    $contador=0;
+
+    for ($i=2;$i<=$numero;$i++)
+
+    {
+        if($numero%$i==0)
+        {
+        if(++$contador>1)
+        return false;
+        }
+    }
+return true;
 }
 
 
-
-while($primo && $i<$num){
-    $primo=($num%$i) !=0;
-    $i++;
+if (ctype_digit($_GET['numero']) && $_GET ['numero']>0)
+{
+    echo "El numero es valido";
+    $numeroprimo= (int) $_GET['numero'];
+    echo "<h1>$numeroprimo</h1>";
+    if (primo($numeroprimo))
+        {
+        echo "Es un numero que ingreso es primo";
+        }
+    else
+        {
+        echo "El numero que ingreso NO ES numero primo";   
+        }
 }
-if($primo){
-    echo " <h3>El Numero $num es primo</h3>";
-    echo "<br>";
+else
+{
+    echo "<h3> Numero no valido</h3>";
 }
-else {
-    echo "<h3>El numero $num no es primo</h3>";
-    echo "<br>";
-}
-
 
 
 ?>
 
 <form>
-<form>
-Escriba un numero:
-<input name="numero" type="text" placeholder="Numero" >
-<input type="submit" value="Validar">
+Escribe un numero:
+
+<input name="numero" type="text" placeholder="Ingrese numero" >
+<input type="submit" value="Evaluar">
 </form>
 
 </body>
