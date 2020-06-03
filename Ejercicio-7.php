@@ -20,7 +20,7 @@ if (is_numeric($num)) {
 else { 
     echo $num . "<h3> No es numerico</h3>"; 
     echo "<br>";
-break;
+
 } 
 
 
