@@ -33,7 +33,7 @@ if (ctype_digit($_GET['numero']) && $_GET ['numero']>0)
     echo "<h1>$numeroprimo</h1>";
     if (primo($numeroprimo))
         {
-        echo "Es un numero que ingreso es primo";
+        echo "El numero que ingreso es primo";
         }
     else
         {
