@@ -36,7 +36,7 @@ else {
     echo "El numero $num no es primo";
     echo "<br>";
 }
-endif;
+
 
 
 ?>
