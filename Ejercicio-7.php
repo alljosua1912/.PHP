@@ -14,11 +14,11 @@ $num=$_GET['numero'];
 $i=2;
 $primo=true;
 if (is_numeric($num)) { 
-    echo $num . " Es numerico"; 
+    echo $num . "<h3> Es numerico</h3>"; 
     echo "<br>";
 } 
 else { 
-    echo $num . " No es numerico"; 
+    echo $num . "<h3> No es numerico</h3>"; 
     echo "<br>";
 } 
 
@@ -29,11 +29,11 @@ while($primo && $i<$num){
     $i++;
 }
 if($primo){
-    echo " El Numero $num es primo";
+    echo " <h3>El Numero $num es primo</h3>";
     echo "<br>";
 }
 else {
-    echo "El numero $num no es primo";
+    echo "<h3>El numero $num no es primo</h3>";
     echo "<br>";
 }
 
